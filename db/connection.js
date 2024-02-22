@@ -6,10 +6,9 @@ const connection = mysql.createConnection({
   password: 'your_password',
   database: 'employee_tracker'
 });
-
-connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connected to the employee_tracker database.');
+connection.on("error", (err) => {
+   
+console.log("- STATS Mysql2 connection died:", err);
 });
 
-module.exports = connection;
+module.exports=connection
