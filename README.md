@@ -1,1 +1,1 @@
-# Content-Mananagement-System
+# Content-Management-System
